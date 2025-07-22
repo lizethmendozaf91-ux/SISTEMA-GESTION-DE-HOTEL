@@ -14,7 +14,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             InicializarUsuarios();
         }
 
-        // Inicializar usuarios de demostración
+        // Inicializar usuarios de demostración, no se dejo visible la contraseña
         private void InicializarUsuarios()
         {
             usuarios = new List<Usuario>
@@ -23,24 +23,24 @@ namespace SISTEMA_GESTION_DE_HOTEL
                 {
                     Id = 1,
                     NombreUsuario = "admin",
-                    //Contraseña = "admin123",
-                    //NombreCompleto = "Administrador Principal",
+                    //Contraseña = "admin2025",
+                    NombreCompleto = "Administrador Principal",
                     Tipo = TipoUsuario.Administrador
                 },
                 new Usuario
                 {
                     Id = 2,
                     NombreUsuario = "recepcion",
-                    //Contraseña = "recep123",
-                    //NombreCompleto = "María González",
+                    //Contraseña = "recep2025",
+                    NombreCompleto = "Katerine Ramirez",
                     Tipo = TipoUsuario.Recepcionista
                 },
                 new Usuario
                 {
                     Id = 3,
                     NombreUsuario = "huesped1",
-                    Contraseña = "huesped123",
-                    NombreCompleto = "Juan Pérez",
+                    //Contraseña = "sindy2025",
+                    NombreCompleto = "Sindy Romero",
                     Tipo = TipoUsuario.Huesped
                 }
             };
@@ -88,7 +88,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
 
                 if (usuario != null)
                 {
-                    usuarioActual = usuario; // Guardar el usuario actual
+                    usuarioActual = usuario; // Se guardara datos de Usuario
                     Console.WriteLine($"\n✓ Bienvenido, {usuario.NombreCompleto}!");
                     Console.WriteLine("Presiona cualquier tecla para continuar...");
                     Console.ReadKey();
@@ -117,9 +117,6 @@ namespace SISTEMA_GESTION_DE_HOTEL
         {
             return usuarioActual;
         }
-
-        // Mostrar encabezado del login
-        
 
         // Leer contraseña con asteriscos
         private string LeerContraseñaOculta()
