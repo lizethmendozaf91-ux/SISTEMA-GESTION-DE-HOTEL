@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +8,10 @@ namespace SISTEMA_GESTION_DE_HOTEL
 {
     internal class MenuPrincipal
     {
-        // *** AGREGAR ESTA VARIABLE QUE FALTA ***
+        // *** VARIABLES ***
         private Usuario usuarioActual;
 
-        // *** AGREGAR ESTE CONSTRUCTOR QUE FALTA ***
+        // AGREGAR ESTE CONSTRUCTOR 
         public MenuPrincipal(Usuario usuario)
         {
             usuarioActual = usuario;
@@ -23,7 +23,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             while (continuar)
             {
                 Console.Clear();
-                Encabezado.MostrarEncabezado(); // Este método también falta - lo agregamos abajo
+                Encabezado.MostrarEncabezado(); 
                 Console.WriteLine($"Usuario: {usuarioActual.NombreCompleto} ({usuarioActual.Tipo})\n");
 
                 switch (usuarioActual.Tipo)
@@ -41,7 +41,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        // *** AGREGAR ESTE MÉTODO QUE FALTA ***
+        
         
 
         private bool MostrarMenuAdministrador()
@@ -55,7 +55,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             Console.WriteLine("6. Estados Financieros");
             Console.WriteLine("0. Cerrar Sesión");
             Console.Write("\nSelecciona una opción: ");
-            return ProcesarOpcionMenu(); // Este método también falta - lo agregamos abajo
+            return ProcesarOpcionMenu(); 
         }
 
         private bool MostrarMenuRecepcionista()
@@ -83,7 +83,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             return ProcesarOpcionMenu();
         }
 
-        // *** AGREGAR ESTE MÉTODO QUE FALTA ***
+        // *** METODOS PARA PROCESAR OPCIONES DE MENU ***
         private bool ProcesarOpcionMenu()
         {
             try
@@ -115,7 +115,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        // *** AGREGAR ESTE MÉTODO QUE FALTA ***
+        
         private void EjecutarOpcion(int opcion)
         {
             switch (usuarioActual.Tipo)
@@ -132,28 +132,28 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        // *** AGREGAR ESTOS MÉTODOS QUE FALTAN ***
+        // FALATA DESARROLLAR CADA CASE A EJECUCION DE CADA GESTION ***
         private void EjecutarOpcionAdministrador(int opcion)
         {
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("Gestión de Usuarios - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 2:
-                    Console.WriteLine("Reportes del Sistema - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 3:
-                    Console.WriteLine("Configuración del Hotel - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 4:
-                    Console.WriteLine("Gestión de Habitaciones - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 5:
-                    Console.WriteLine("Gestión de Reservas - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 6:
-                    Console.WriteLine("Estados Financieros - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 default:
                     Console.WriteLine("Opción no válida");
@@ -166,19 +166,19 @@ namespace SISTEMA_GESTION_DE_HOTEL
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("Check-in de Huéspedes - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 2:
-                    Console.WriteLine("Check-out de Huéspedes - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 3:
-                    Console.WriteLine("Consultar Reservas - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 4:
-                    Console.WriteLine("Gestión de Habitaciones - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 5:
-                    Console.WriteLine("Facturación - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 default:
                     Console.WriteLine("Opción no válida");
@@ -191,16 +191,16 @@ namespace SISTEMA_GESTION_DE_HOTEL
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("Ver mis Reservas - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 2:
-                    Console.WriteLine("Servicios del Hotel - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 3:
-                    Console.WriteLine("Solicitar Servicio a Habitación - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 case 4:
-                    Console.WriteLine("Estado de Cuenta - En desarrollo");
+                    Console.WriteLine("En desarrollo");
                     break;
                 default:
                     Console.WriteLine("Opción no válida");
