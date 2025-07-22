@@ -11,10 +11,10 @@ namespace SISTEMA_GESTION_DE_HOTEL
             Console.Title = "Sistema Hotel";
             SistemaLogin sistema = new SistemaLogin();
 
-            // Mostrar usuarios de demostración - CORREGIDO: agregados paréntesis
+            // Mostrar usuarios de demostración para Iniciar Sesion
             sistema.MostrarUsuariosDemo();
 
-            // Intentar iniciar sesión
+            // Hacer inicio de sesión
             if (sistema.IniciarSesion())
             {
                 // Si el login es exitoso, mostrar el menú principal
