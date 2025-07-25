@@ -23,7 +23,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
                 {
                     Id = 1,
                     NombreUsuario = "admin",
-                    //Contraseña = "admin2025",
+                    Contraseña = "admin2025",
                     NombreCompleto = "Administrador Principal",
                     Tipo = TipoUsuario.Administrador
                 },
@@ -31,7 +31,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
                 {
                     Id = 2,
                     NombreUsuario = "recepcion",
-                    //Contraseña = "recep2025",
+                    Contraseña = "recep2025",
                     NombreCompleto = "Katerine Ramirez",
                     Tipo = TipoUsuario.Recepcionista
                 },
@@ -39,7 +39,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
                 {
                     Id = 3,
                     NombreUsuario = "huesped1",
-                    //Contraseña = "sindy2025",
+                    Contraseña = "sindy2025",
                     NombreCompleto = "Sindy Romero",
                     Tipo = TipoUsuario.Huesped
                 }

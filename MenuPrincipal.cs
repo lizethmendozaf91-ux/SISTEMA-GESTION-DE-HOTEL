@@ -8,10 +8,8 @@ namespace SISTEMA_GESTION_DE_HOTEL
 {
     internal class MenuPrincipal
     {
-        // *** VARIABLES ***
         private Usuario usuarioActual;
 
-        // AGREGAR ESTE CONSTRUCTOR 
         public MenuPrincipal(Usuario usuario)
         {
             usuarioActual = usuario;
@@ -23,7 +21,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             while (continuar)
             {
                 Console.Clear();
-                Encabezado.MostrarEncabezado(); 
+                Encabezado.MostrarEncabezado();
                 Console.WriteLine($"Usuario: {usuarioActual.NombreCompleto} ({usuarioActual.Tipo})\n");
 
                 switch (usuarioActual.Tipo)
@@ -41,9 +39,6 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        
-        
-
         private bool MostrarMenuAdministrador()
         {
             Console.WriteLine("=== MENÚ ADMINISTRADOR ===");
@@ -55,7 +50,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             Console.WriteLine("6. Estados Financieros");
             Console.WriteLine("0. Cerrar Sesión");
             Console.Write("\nSelecciona una opción: ");
-            return ProcesarOpcionMenu(); 
+            return ProcesarOpcionMenu();
         }
 
         private bool MostrarMenuRecepcionista()
@@ -83,7 +78,6 @@ namespace SISTEMA_GESTION_DE_HOTEL
             return ProcesarOpcionMenu();
         }
 
-        // *** METODOS PARA PROCESAR OPCIONES DE MENU ***
         private bool ProcesarOpcionMenu()
         {
             try
@@ -96,15 +90,14 @@ namespace SISTEMA_GESTION_DE_HOTEL
                     Console.WriteLine("\nCerrando sesión...");
                     Console.WriteLine("Presiona cualquier tecla para continuar...");
                     Console.ReadKey();
-                    return false; // Salir del menú
+                    return false;
                 }
 
-                // Ejecutar la opción seleccionada
                 EjecutarOpcion(opcion);
 
                 Console.WriteLine("\nPresiona cualquier tecla para continuar...");
                 Console.ReadKey();
-                return true; // Continuar en el menú
+                return true;
             }
             catch (Exception ex)
             {
@@ -115,7 +108,6 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        
         private void EjecutarOpcion(int opcion)
         {
             switch (usuarioActual.Tipo)
@@ -132,26 +124,15 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        // FALATA DESARROLLAR CADA CASE A EJECUCION DE CADA GESTION ***
         private void EjecutarOpcionAdministrador(int opcion)
         {
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 2:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 3:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 4:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 5:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 6:
                     Console.WriteLine("En desarrollo");
                     break;
@@ -166,17 +147,9 @@ namespace SISTEMA_GESTION_DE_HOTEL
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 2:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 3:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 4:
-                    Console.WriteLine("En desarrollo");
-                    break;
                 case 5:
                     Console.WriteLine("En desarrollo");
                     break;
@@ -188,19 +161,21 @@ namespace SISTEMA_GESTION_DE_HOTEL
 
         private void EjecutarOpcionHuesped(int opcion)
         {
+            EjecutarHuesped acciones = new EjecutarHuesped(usuarioActual);
+
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("En desarrollo");
+                    acciones.VerReservas();
                     break;
                 case 2:
-                    Console.WriteLine("En desarrollo");
+                    acciones.VerServicios();
                     break;
                 case 3:
-                    Console.WriteLine("En desarrollo");
+                    acciones.SolicitarServicioHabitacion();
                     break;
                 case 4:
-                    Console.WriteLine("En desarrollo");
+                    acciones.VerEstadoCuenta();
                     break;
                 default:
                     Console.WriteLine("Opción no válida");
