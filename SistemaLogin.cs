@@ -9,6 +9,11 @@ namespace SISTEMA_GESTION_DE_HOTEL
         private List<Usuario> usuarios;
         private Usuario usuarioActual; // Variable para almacenar el usuario logueado
 
+        public SistemaLogin(List<Usuario> listaUsuarios)
+        {
+            usuarios = listaUsuarios;
+        }
+
         public SistemaLogin()
         {
             InicializarUsuarios();
@@ -24,7 +29,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
                     Id = 1,
                     NombreUsuario = "admin",
                     Contraseña = "admin2025",
-                    NombreCompleto = "Administrador Principal",
+                    NombreCompleto = "Marlon Varela",
                     Tipo = TipoUsuario.Administrador
                 },
                 new Usuario
@@ -89,7 +94,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
                 if (usuario != null)
                 {
                     usuarioActual = usuario; // Se guardara datos de Usuario
-                    Console.WriteLine($"\n✓ Bienvenido, {usuario.NombreCompleto}!");
+                    Console.WriteLine($"\n Bienvenido, {usuario.NombreCompleto}!");
                     Console.WriteLine("Presiona cualquier tecla para continuar...");
                     Console.ReadKey();
                     return true;
