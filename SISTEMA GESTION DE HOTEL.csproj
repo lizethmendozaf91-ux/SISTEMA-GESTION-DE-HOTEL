@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EjecutarOpciones.cs" />
     <Compile Include="Encabezado.cs" />
     <Compile Include="Habitacion.cs" />
     <Compile Include="MenuPrincipal.cs" />

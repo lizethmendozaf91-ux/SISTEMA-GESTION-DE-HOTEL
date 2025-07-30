@@ -18,10 +18,10 @@ namespace SISTEMA_GESTION_DE_HOTEL
     // Clase para manejar las opciones del recepcionista
     public class RecepcionistaManager
     {
-        private List<Cliente> listaClientes = new List<Cliente>();
+        private static List<Cliente> listaClientes = new List<Cliente>();
 
         // Métodos de instancia (sin static)
-        private void RegistrarCliente()
+        public static void RegistrarCliente()
         {
             Console.WriteLine("===== REGISTRAR NUEVO CLIENTE =====");
             Cliente nuevo = new Cliente();
@@ -35,7 +35,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             Console.WriteLine("Cliente registrado exitosamente.");
         }
 
-        private void VerReservas()
+        public static void VerReservas()
         {
             Console.WriteLine("===== LISTA DE RESERVAS =====");
             if (listaClientes.Count == 0)
@@ -53,7 +53,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        private void HacerCheckIn()
+        public static void HacerCheckIn()
         {
             Console.WriteLine("===== CHECK-IN CLIENTE =====");
             Console.Write("Ingrese el número de identidad del cliente: ");
@@ -77,7 +77,7 @@ namespace SISTEMA_GESTION_DE_HOTEL
             }
         }
 
-        private void HacerCheckOut()
+        public static void HacerCheckOut()
         {
             Console.WriteLine("===== CHECK-OUT CLIENTE =====");
             Console.Write("Ingrese el número de identidad del cliente: ");
